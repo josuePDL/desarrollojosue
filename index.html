@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Josue-Desarrollo Web</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="icon" href="multi/leon (1).png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Josue</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <!--Inicio Banner--> 
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-imagen">
+                <img src="multi/Profile.jpg" alt="">
+            </div>
+            <h1>Josue Pacheco</h1>
+            <h2>Estudiante Ingenieria en Sistemas</h2>
+            <div class="redes">
+                <a href="https://wa.me/50256237751" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/josue-daniel-pacheco-de-leon-ab8546288/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/josuepdl.23" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://greypage59blog.online/Inicio.html" target="_blank"><i class="fa-solid fa-blog"></i></a>
+                <a href="mailto:josuedanielpachecodeleon554@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--Inicio Sobre mi-->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola Soy Josue</span> Soy un estudiante entusiasta de primer año de Ingeniería en 
+                Sistemas, apasionado por la tecnología y su potencial para 
+                transformar la sociedad. Me considero una persona comprometida 
+                con el aprendizaje continuo y la búsqueda constante de soluciones 
+                innovadoras que puedan mejorar la vida de las personas y 
+                optimizar procesos mediante el uso de la tecnología.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            10-01-2005
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +502 56237751
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            josuedanielpachecodeleon554@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            https://greypage59blog.online/Inicio.html
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Zona 8 de Villa Nueva
+                        </li>
+                        <li>
+                            <strong>Profesion</strong>
+                            <span>Estudiante</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-rocket"></i>
+                            <span>ESPACIO</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-rifle"></i>
+                            <span>HISTORIA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-dog"></i>
+                            <span>MASCOTAS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-microscope"></i>
+                            <span>CIENCIA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-chess-king"></i>
+                            <span>AJEDREZ</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>CODE'S</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <a download="CV Josue Pacheco De León.pdf" href="/Multi/CV Josue Pacheco De León.pdf">
+                <button>
+                  Descargar CV <i class="fa-solid fa-download"></i>
+                  <span class="overlay"></span>
+                </button>
+              </a>
+        </div>
+    </section>
+        <!-- SECCION SKILLS -->
+        <section class="skills" id="skills">
+            <div class="contenido-seccion">
+                <h2>Skills</h2>
+                <div class="fila">
+                    <!-- Technical Skill 
+                    <div class="col">
+                        <h3>Technical Skills</h3>
+                        <div class="skill">
+                            <span>Javascript</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>75%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>HTML & CSS</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>89%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Photoshop</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>95%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Wordpress</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>81%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Drupa</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>55%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Professional Skills -->
+                    <div class="col">
+                        <h3>Professional Skills</h3>
+                        <div class="skill">
+                            <span>Comunicación</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Trabajo en Equipo</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Creatividad</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>99%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Dedicación</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Proyect Management</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>94%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- SECCION CURRICULUM -->
+        <section id="curriculum" class="curriculum">
+            <div class="contenido-seccion">
+                <h2>Curriculum</h2>
+                <div class="fila">
+                    <div class="col izquierda">
+                        <h3>Educación</h3>
+                        <div class="item izq">
+                            <h4>Educacion Superior</h4>
+                            <span class="casa">Universidad Mariano Galvez</span>
+                            <span class="fecha">Enero - 2023</span>
+                            <p>Durante mi tiempo en la Universidad Mariano Gálvez, he tenido la oportunidad de participar activamente en cursos y proyectos que han fortalecido mi base de conocimientos en Base de Datos, sobre logica de programacion</p>
+                            <div class="conectori">
+                                <div class="circuloi"></div>
+                            </div>
+                        </div>
+                        <div class="item izq">
+                            <h4>Educacion Media</h4>
+                            <span class="casa">Bachiller en Computacion</span>
+                            <span class="fecha">2021 - 2022</span>
+                            <p>Mi tiempo en INED Ciudad Peronia me permitió cultivar habilidades como logica de programacion, trabajo en equipo y el liderazgo, las cuales considero esenciales para mi crecimiento y éxito futuros. Además, participé en varios proyectos en los cuales pude incentivar mis conexiones interpersonales  que me ayudó a desarrollar habilidades de liderazgo, colaboración y perseverancia.</p>
+                            <div class="conectori">
+                                <div class="circuloi"></div>
+                            </div>
+                        </div>
+                        <div class="item izq">
+                            <h4>Cursos</h4>
+                            <span class="casa">Udemys</span>
+                            <span class="fecha">Actualidad</span>
+                            <p>Durante mi búsqueda constante de aprendizaje, he completado cursos fundamentales que abarcan desde el desarrollo web hasta el hacking ético. Estos incluyen cursos en HTML y CSS para principiantes, donde adquirí la capacidad de crear páginas web atractivas y funcionales; una introducción a JavaScript, que me permitió desarrollar interacciones dinámicas en sitios web; y fundamentos de Hacking Ético, que me proporcionaron una comprensión esencial de la seguridad cibernética y la ética en el mundo digital. Estos cursos han enriquecido mi conjunto de habilidades técnicas, despertando mi pasión por el desarrollo web y la seguridad cibernética, y estoy emocionado por aplicar estos conocimientos en proyectos futuros mientras continúo mi educación en estas áreas en constante evolución.</p>
+                            <div class="conectori">
+                                <div class="circuloi"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col derecha">
+                        <h3>Experiencia de trabajo</h3>
+                        <div class="item der">
+                            <h4>Desarrollo Web/Atencion al Cliente</h4>
+                            <span class="casa">Paginas Web Guatemala</span>
+                            <span class="fecha">Enero - Febrero 2023</span>
+                            <p></p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
+                        <div class="item der">
+                            <h4>Ventas/Atencion al Cliente</h4>
+                            <span class="casa">JOSO, S.A.</span>
+                            <span class="fecha">Septiembre 2022 - Enero 2023</span>
+                            <p></p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- SECCION PORTFOLIO 
+        <section id="portfolio" class="portfolio">
+            <div class="contenido-seccion">
+                <h2>PORTFOLIO</h2>
+                <div class="galeria">
+                    <div class="proyecto">
+                        <img src="img/p1.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Diseño Creativo</h3>
+                            <p>Fotografía</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p2.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Diseño Creativo</h3>
+                            <p>Fotografía</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p3.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Diseño Creativo</h3>
+                            <p>Fotografía</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p4.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Diseño Creativo</h3>
+                            <p>Fotografía</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p5.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Diseño Creativo</h3>
+                            <p>Fotografía</p>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <img src="img/p6.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Diseño Creativo</h3>
+                            <p>Fotografía</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    
+        <!-- SECCION CONTACTO -->
+        <section id="contacto" class="contacto">
+            <div class="contenido-seccion">
+                <h2>CONTACTO</h2>
+                <div class="fila">
+                    <!-- Formulario -->
+                    <div class="col">
+                        <input type="text" placeholder="Tú Nombre">
+                        <input type="text" placeholder="Número telefónico">
+                        <input type="text" placeholder="Dirección de correo">
+                        <input type="text" placeholder="Tema">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        <button>
+                            Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </div>
+                    <!-- Mapa -->
+                    <div class="col">
+                        <img src="img/ubicacion.png" alt="">
+                        <div class="info">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Zona 8 de Villa Nueva
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    Llamanos: +502 5623 7751
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    Email: josuedanielpachecodeleon554@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- footer -->
+        <footer>
+            <a href="#inicio" class="arriba">
+                <i class="fa-solid fa-angles-up"></i>
+            </a>
+            <div class="redes">
+                <a href="https://www.facebook.com/josuepdl.23" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://wa.me/50256237751" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/josue-daniel-pacheco-de-leon-ab8546288/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://greypage59blog.online/Inicio.html" target="_blank"><i class="fa-solid fa-rss"></i></a>
+            </div>
+        </footer>
+    
+        <script src="script.js"></script>
+    <!--<footer  &copy; Josue</footer -->
+        
+
+</body>
+</html>
