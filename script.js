@@ -16,21 +16,31 @@ function seleccionar(){
     menuVisible = false;
 }
 //Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
+function efectoHabilidades() {
     var skills = document.getElementById("skills");
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
+    if (distancia_skills >= 300) {
         let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("wordpress");
-        habilidades[4].classList.add("drupal");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+        
+        // Define los porcentajes de cada habilidad
+        const porcentajes = [
+            { skill: "Comunicación", porcentaje: 80 },
+            { skill: "C#", porcentaje: 50 },
+            { skill: "Trabajo en Equipo", porcentaje: 70 },
+            { skill: "Manejo de Base de Datos", porcentaje: 75 },
+            { skill: "Creatividad", porcentaje: 99 },
+            { skill: "Dedicación", porcentaje: 65 },
+            { skill: "Autodidacta", porcentaje: 94 }
+        ];
+        
+        // Aplicar los porcentajes a cada barra de progreso
+        for (let i = 0; i < habilidades.length; i++) {
+            if (habilidades[i]) {
+                let porcentaje = porcentajes[i].porcentaje;
+                habilidades[i].style.width = porcentaje + "%"; // Ajusta el ancho de la barra
+                habilidades[i].querySelector("span").textContent = porcentaje + "%"; // Actualiza el texto del porcentaje
+            }
+        }
     }
 }
 
