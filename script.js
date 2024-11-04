@@ -30,7 +30,6 @@ function efectoHabilidades() {
             { skill: "Manejo de Base de Datos", porcentaje: 75 },
             { skill: "Creatividad", porcentaje: 99 },
             { skill: "Dedicación", porcentaje: 65 },
-            { skill: "Autodidacta", porcentaje: 94 }
         ];
         
         // Aplicar los porcentajes a cada barra de progreso
