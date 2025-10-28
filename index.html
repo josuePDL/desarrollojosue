@@ -320,32 +320,37 @@
             </div>
         </section> 
     <!-- SECCIÓN CONTACTO (NUEVA) -->
-    <section id="contacto" class="contacto">
-        <div class="contenido-seccion">
-            <h2>Contacto</h2>
-            <form name="contacto" method="POST" data-netlify="true" id="contact-form">
-                <input type="hidden" name="form-name" value="contacto">
+   <form name="contacto" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contacto">
 
-                <label>Nombre:</label>
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <div class="campo">
+    <input type="text" name="nombre" id="nombre" placeholder=" " required>
+    <label for="nombre">Nombre</label>
+  </div>
 
-                <label>Teléfono:</label>
-                <input type="tel" name="phone" placeholder="Tu teléfono" required>
+  <div class="campo">
+    <input type="tel" name="phone" id="phone" placeholder=" " required>
+    <label for="phone">Teléfono</label>
+  </div>
 
-                <label>Correo electrónico:</label>
-                <input type="email" name="email" placeholder="Tu correo" required>
+  <div class="campo">
+    <input type="email" name="email" id="email" placeholder=" " required>
+    <label for="email">Correo electrónico</label>
+  </div>
 
-                <label>Asunto:</label>
-                <input type="text" name="asunto" placeholder="Asunto" required>
+  <div class="campo">
+    <input type="text" name="asunto" id="asunto" placeholder=" " required>
+    <label for="asunto">Asunto</label>
+  </div>
 
-                <label>Mensaje:</label>
-                <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+  <div class="campo">
+    <textarea name="mensaje" id="mensaje" rows="4" placeholder=" " required></textarea>
+    <label for="mensaje">Mensaje</label>
+  </div>
 
-                <button type="submit">Enviar mensaje</button>
-                <p class="success-message" id="success">✅ ¡Tu mensaje fue enviado correctamente!</p>
-            </form>
-        </div>
-    </section>
+  <button type="submit">Enviar mensaje</button>
+</form>
+
 
     
         <!-- footer -->
@@ -387,6 +392,7 @@
 
 </body>
 </html>
+
 
 
 
