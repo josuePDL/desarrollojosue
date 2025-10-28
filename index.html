@@ -22,6 +22,8 @@
                     <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
                     <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+
                 </ul>
             </nav>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
@@ -317,6 +319,34 @@
                 </div>
             </div>
         </section> 
+    <!-- SECCIÓN CONTACTO (NUEVA) -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>Contacto</h2>
+            <form name="contacto" method="POST" data-netlify="true" id="contact-form">
+                <input type="hidden" name="form-name" value="contacto">
+
+                <label>Nombre:</label>
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+                <label>Teléfono:</label>
+                <input type="tel" name="phone" placeholder="Tu teléfono" required>
+
+                <label>Correo electrónico:</label>
+                <input type="email" name="email" placeholder="Tu correo" required>
+
+                <label>Asunto:</label>
+                <input type="text" name="asunto" placeholder="Asunto" required>
+
+                <label>Mensaje:</label>
+                <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+                <p class="success-message" id="success">✅ ¡Tu mensaje fue enviado correctamente!</p>
+            </form>
+        </div>
+    </section>
+
     
         <!-- footer -->
         <footer>
@@ -333,10 +363,31 @@
     
         <script src="script.js"></script>
     <!--<footer  &copy; Josue</footer -->
-        
+        <!-- Script para enviar el formulario sin recargar -->
+    <script>
+      const form = document.getElementById("contact-form");
+      const successMsg = document.getElementById("success");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+          successMsg.style.display = "block";
+          form.reset();
+        })
+        .catch(() => alert("❌ Error al enviar el formulario"));
+      });
+    </script>
 
 </body>
 </html>
+
 
 
 
