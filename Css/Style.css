@@ -522,189 +522,90 @@ html{
     margin-bottom: 0px;
 }
 /* SECCION CONTACTO */
-.contacto {
-    background-image: url("img/contact_bg.png");
-    background-color: #1e2326;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    padding: 80px 0;
-    position: relative;
-}
-
-.contacto::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 0;
-}
-
-.contacto .contenido-seccion {
-    max-width: 1100px;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-    padding: 0 20px;
-}
-
-.contacto h2 {
-    font-size: 48px;
-    font-family: 'Righteous', sans-serif;
-    text-align: center;
-    padding: 20px 0;
-    color: #1CB698;
-    letter-spacing: 2px;
-    text-shadow: 0 0 8px rgba(28, 182, 152, 0.3);
-}
-
-.contacto .fila {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.contacto .col {
-    flex: 1 1 45%;
-    position: relative;
-    min-width: 300px;
-}
-
-.contacto .col input,
-.contacto .col textarea {
-    display: block;
+/* --- CAMPOS DE FORMULARIO MEJORADOS --- */
+.contacto form {
     width: 100%;
-    padding: 15px 18px;
-    border: none;
-    margin-bottom: 20px;
-    background-color: #252A2E;
-    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacto .campo {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.contacto .campo input,
+.contacto .campo textarea {
+    width: 100%;
+    padding: 18px 16px;
+    background: #252A2E;
+    border: 2px solid transparent;
+    border-radius: 10px;
     font-size: 16px;
-    border-radius: 8px;
+    color: #fff;
     outline: none;
     transition: all 0.3s ease;
 }
 
-.contacto .col input:focus,
-.contacto .col textarea:focus {
-    box-shadow: 0 0 0 2px #1CB698;
-    background-color: #2e3438;
+.contacto .campo input:focus,
+.contacto .campo textarea:focus {
+    border-color: #1CB698;
+    background: #2c3236;
+    box-shadow: 0 0 10px rgba(28, 182, 152, 0.3);
 }
 
-.contacto textarea {
-    resize: none;
-    height: 150px;
+.contacto .campo label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    color: #aaa;
+    font-size: 16px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
 }
 
+/* --- EFECTO DE ETIQUETA FLOTANTE --- */
+.contacto .campo input:focus + label,
+.contacto .campo input:not(:placeholder-shown) + label,
+.contacto .campo textarea:focus + label,
+.contacto .campo textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 12px;
+    font-size: 13px;
+    color: #1CB698;
+    background: #252A2E;
+    padding: 0 5px;
+}
+
+/* --- BOTÓN --- */
 .contacto button {
     cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #1CB698;
-    border-radius: 30px;
-    padding: 12px 28px;
-    font-size: 16px;
+    background: #1CB698;
     color: #fff;
-    position: relative;
-    overflow: hidden;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     display: block;
     margin: 30px auto 0;
-    letter-spacing: 1px;
-    transition: all 0.4s ease;
-}
-
-.contacto button .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: #1CB698;
-    z-index: -1;
-    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .contacto button:hover {
-    color: #000;
+    background: #17a589;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(28, 182, 152, 0.3);
 }
 
-.contacto button:hover .overlay {
-    width: 100%;
+.contacto button:active {
+    transform: scale(0.97);
 }
 
-.contacto .col img {
-    width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.contacto .col .info {
-    background-color: rgba(37, 42, 46, 0.9);
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 350px;
-    margin: auto;
-    text-align: left;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.contacto .col .info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contacto .col .info ul li {
-    margin-bottom: 18px;
-    font-size: 16px;
-}
-
-.contacto .col .info ul li i {
-    color: #1CB698;
-    display: inline-block;
-    margin-right: 15px;
-    font-size: 20px;
-}
-
-footer{
-    background-color: #252A2E;
-    color: #fff;
-    padding: 50px 0 30px 0;
-    text-align: center;
-    position: relative;
-    width: 100%;
-}
-footer .redes{
-    margin-bottom: 20px;
-}
-footer .redes a{
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 5px;
-    font-size: 20px;
-    transition: .3s;
-}
-footer .arriba{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #1CB698;
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -25px;
-    border-radius: 50%;
-    line-height: 50px;
-    font-size: 18px;
-}
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
     nav{
@@ -775,3 +676,4 @@ footer .arriba{
     }
 
 }
+
