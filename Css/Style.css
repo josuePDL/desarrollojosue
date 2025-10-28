@@ -522,89 +522,151 @@ html{
     margin-bottom: 0px;
 }
 /* SECCION CONTACTO */
-.contacto{
-    background-image: url(img/contact_bg.png);
+.contacto {
+    background-image: url("img/contact_bg.png");
     background-color: #1e2326;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
-    padding: 50px 0;
-}
-.contacto .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.contacto h2{
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20px 0;
-}
-.contacto .fila{
-    display: flex;
-}
-.contacto .col{
-    width: 50%;
-    padding: 10px;
+    padding: 80px 0;
     position: relative;
 }
-.contacto .col input, .contacto .col textarea{
+
+.contacto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+}
+
+.contacto .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.contacto h2 {
+    font-size: 48px;
+    font-family: 'Righteous', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    color: #1CB698;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(28, 182, 152, 0.3);
+}
+
+.contacto .fila {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contacto .col {
+    flex: 1 1 45%;
+    position: relative;
+    min-width: 300px;
+}
+
+.contacto .col input,
+.contacto .col textarea {
     display: block;
     width: 100%;
-    padding: 18px;
+    padding: 15px 18px;
     border: none;
     margin-bottom: 20px;
     background-color: #252A2E;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
 }
-.contacto button{
+
+.contacto .col input:focus,
+.contacto .col textarea:focus {
+    box-shadow: 0 0 0 2px #1CB698;
+    background-color: #2e3438;
+}
+
+.contacto textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contacto button {
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
-    width: fit-content;
-    display: block;
-    margin: 20px auto;
-    padding: 10px 22px;
+    border: 2px solid #1CB698;
+    border-radius: 30px;
+    padding: 12px 28px;
     font-size: 16px;
     color: #fff;
     position: relative;
-    z-index: 10;
+    overflow: hidden;
+    display: block;
+    margin: 30px auto 0;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
 }
-.contacto button .overlay{
+
+.contacto button .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
+    width: 0%;
     height: 100%;
     background-color: #1CB698;
     z-index: -1;
-    transition: 1s;
+    transition: all 0.4s ease;
 }
-.contacto button:hover .overlay{
+
+.contacto button:hover {
+    color: #000;
+}
+
+.contacto button:hover .overlay {
     width: 100%;
 }
-.contacto .col img{
+
+.contacto .col img {
     width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
-.contacto .col .info{
-    position: absolute;
-    top: 40%;
-    background-color: #252A2E;
-    padding: 20px;
+
+.contacto .col .info {
+    background-color: rgba(37, 42, 46, 0.9);
+    padding: 25px;
+    border-radius: 12px;
     max-width: 350px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
-.contacto .col .info ul{
+
+.contacto .col .info ul {
     list-style: none;
+    padding: 0;
 }
-.contacto .col .info ul li{
-    margin-bottom: 20px;
+
+.contacto .col .info ul li {
+    margin-bottom: 18px;
+    font-size: 16px;
 }
-.contacto .col .info ul li i{
+
+.contacto .col .info ul li i {
     color: #1CB698;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 15px;
+    font-size: 20px;
 }
+
 footer{
     background-color: #252A2E;
     color: #fff;
@@ -711,4 +773,5 @@ footer .arriba{
     .contacto .fila .col{
         width: 100%;
     }
+
 }
