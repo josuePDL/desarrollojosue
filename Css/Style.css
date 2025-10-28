@@ -522,89 +522,122 @@ html{
     margin-bottom: 0px;
 }
 /* SECCION CONTACTO */
-/* --- CAMPOS DE FORMULARIO MEJORADOS --- */
-.contacto form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+/* SECCIÓN CONTACTO */
+.contacto {
+  background-color: #1e2326;
+  color: #fff;
+  padding: 60px 20px;
 }
 
-.contacto .campo {
-    position: relative;
-    margin-bottom: 25px;
+.contacto .contenido-seccion {
+  max-width: 600px;
+  margin: auto;
 }
 
-.contacto .campo input,
-.contacto .campo textarea {
-    width: 100%;
-    padding: 18px 16px;
-    background: #252A2E;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    font-size: 16px;
-    color: #fff;
-    outline: none;
-    transition: all 0.3s ease;
+.contacto h2 {
+  font-size: 48px;
+  font-family: 'Righteous';
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.contacto .campo input:focus,
-.contacto .campo textarea:focus {
-    border-color: #1CB698;
-    background: #2c3236;
-    box-shadow: 0 0 10px rgba(28, 182, 152, 0.3);
+/* Estilos generales del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.contacto .campo label {
-    position: absolute;
-    top: 50%;
-    left: 16px;
-    color: #aaa;
-    font-size: 16px;
-    pointer-events: none;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
+/* Campos */
+.campo {
+  position: relative;
+  width: 100%;
 }
 
-/* --- EFECTO DE ETIQUETA FLOTANTE --- */
-.contacto .campo input:focus + label,
-.contacto .campo input:not(:placeholder-shown) + label,
-.contacto .campo textarea:focus + label,
-.contacto .campo textarea:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 12px;
-    font-size: 13px;
-    color: #1CB698;
-    background: #252A2E;
-    padding: 0 5px;
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 12px 10px;
+  background: transparent;
+  border: 2px solid #1CB698;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
 }
 
-/* --- BOTÓN --- */
-.contacto button {
-    cursor: pointer;
-    background: #1CB698;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    padding: 14px 35px;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    display: block;
-    margin: 30px auto 0;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #00ffc6;
+  box-shadow: 0 0 8px rgba(0, 255, 198, 0.3);
 }
 
-.contacto button:hover {
-    background: #17a589;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(28, 182, 152, 0.3);
+/* Etiquetas flotantes */
+.campo label {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: #aaa;
+  font-size: 15px;
+  transition: 0.3s ease all;
+  pointer-events: none;
+  background-color: #1e2326;
+  padding: 0 4px;
 }
 
-.contacto button:active {
-    transform: scale(0.97);
+/* Efecto al escribir o enfocar */
+.campo input:focus + label,
+.campo input:not(:placeholder-shown) + label,
+.campo textarea:focus + label,
+.campo textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  color: #1CB698;
+  font-size: 13px;
 }
+
+/* Botón */
+.btn-enviar {
+  background-color: transparent;
+  border: 2px solid #1CB698;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn-enviar i {
+  margin-right: 8px;
+}
+
+.btn-enviar .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #1CB698;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.btn-enviar:hover {
+  color: #000;
+}
+
+.btn-enviar:hover .overlay {
+  width: 100%;
+}
+
+
+
+
 
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
@@ -676,4 +709,5 @@ html{
     }
 
 }
+
 
