@@ -339,22 +339,42 @@
             </div>
         </section> 
     <!-- SECCION CONTACTO -->
-    <section id="contacto" class="contacto">
-        <div class="contenido-seccion">
-            <h2>CONTACTO</h2>
-            <div class="fila">
-                <!-- Formulario -->
-                <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+   <section id="contacto" class="contacto">
+    <div class="contenido-seccion">
+        <h2>CONTACTO</h2>
+        <div class="fila">
+
+            <!-- Formulario con Netlify -->
+            <div class="col">
+                <form name="contact" method="POST" data-netlify="true">
+
+                    <input type="text" name="name" placeholder="Tu Nombre" required>
+
+                    <input type="text" name="phone" placeholder="Número telefónico" required>
+
+                    <input type="email" name="email" placeholder="Dirección de correo" required>
+
+                    <input type="text" name="subject" placeholder="Tema">
+
+                    <textarea name="message" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+
+                    <button type="submit">
+                        Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
                     </button>
-                </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+                
                 <!-- Mapa -->
                 <div class="col">
                     <img src="img/ubicacion.png" alt="">
@@ -396,6 +416,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
