@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Josue Pacheco - Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- EFECTOS DE FONDO -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <!-- HEADER -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Josue<span>.</span>Tech</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MÍ</a></li>
+                    <li><a href="#trayectoria" onclick="seleccionar()">TRAYECTORIA</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- INICIO --> 
+    <section id="inicio" class="inicio hidden">
+        <div class="contenido-banner">
+            <div class="contenedor-imagen">
+                <img src="PERFIL.jpg" alt="Foto de perfil de Josue">
+            </div>
+            <h1 id="txt-nombre">Josue Pacheco</h1>
+            <h2 id="txt-profesion" class="text-gradient">Estudiante de Ingeniería en Sistemas</h2>
+            <div class="redes">
+                <a href="https://wa.me/50234216741" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/josue-daniel-pacheco-de-leon-ab8546288/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:josuedanielpachecodeleon554@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+            <a href="#sobremi" class="btn-scroll"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobremi" class="sobremi hidden">
+        <div class="contenido-seccion">
+            <h2 class="text-gradient">Sobre Mí</h2>
+            <div class="fila">
+                <div class="col glass-card p-4">
+                    <p id="txt-sobremi">
+                        Hola, soy Josue. Estudio Ingeniería en Sistemas en la Universidad de Occidente. Me apasiona explorar cómo la tecnología resuelve problemas reales. Disfruto diseñar interfaces web, experimentar con herramientas de inteligencia artificial y optimizar procesos. Fuera de la programación, paso mi tiempo editando diseños en Canva, yendo al cine, jugando simuladores en PC, leyendo novelas gráficas y conviviendo con mis mascotas.
+                    </p>
+                </div>
+                
+                <div class="col glass-card p-4">
+                    <h3>Intereses y Aficiones</h3>
+                    <div class="contenedor-intereses" id="contenedor-aficiones">
+                        <!-- Datos por defecto (se sobrescriben con Sheets si hay) -->
+                        <div class="interes"><i class="fa-solid fa-laptop-code"></i><span>Desarrollo Web</span></div>
+                        <div class="interes"><i class="fa-solid fa-robot"></i><span>Inteligencia Artificial</span></div>
+                        <div class="interes"><i class="fa-solid fa-pen-nib"></i><span>Diseño (Canva)</span></div>
+                        <div class="interes"><i class="fa-solid fa-gamepad"></i><span>Videojuegos</span></div>
+                        <div class="interes"><i class="fa-solid fa-film"></i><span>Cine</span></div>
+                        <div class="interes"><i class="fa-solid fa-dog"></i><span>Mascotas</span></div>
+                        <div class="interes"><i class="fa-solid fa-book-open"></i><span>Lectura</span></div>
+                        <div class="interes"><i class="fa-solid fa-dragon"></i><span>Godzilla</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAYECTORIA (Curriculum) -->
+    <section id="trayectoria" class="curriculum hidden">
+        <div class="contenido-seccion">
+            <h2 class="text-gradient">Trayectoria</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Educación</h3>
+                    <div id="contenedor-educacion" class="timeline">
+                        <div class="item">
+                            <h4>Ingeniería en Sistemas</h4>
+                            <span class="casa">Universidad de Occidente</span>
+                            <span class="fecha">Actualidad</span>
+                            <p>Formación superior enfocada en desarrollo de software, gestión de bases de datos y arquitectura de sistemas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <h3><i class="fa-solid fa-briefcase"></i> Experiencia</h3>
+                    <div id="contenedor-experiencia" class="timeline">
+                        <div class="item">
+                            <h4>Operador CallCenter - Soporte Remoto</h4>
+                            <span class="casa">Grupo Printer</span>
+                            <span class="fecha">Septiembre 2023 - Actualidad</span>
+                            <p>Asistencia técnica, resolución de incidencias informáticas y gestión de tickets para usuarios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTAFOLIO --> 
+    <section id="portfolio" class="portfolio hidden">
+        <div class="contenido-seccion">
+            <h2 class="text-gradient">Proyectos Destacados</h2>
+            <div class="galeria" id="galeria-proyectos">
+                <p style="text-align:center; width:100%; color:var(--text-muted);">Sincronizando proyectos...</p>
+            </div>
+        </div>
+    </section> 
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="redes">
+            <a href="javascript:void(0)" onclick="abrirLogin()" class="btn-admin"><i class="fa-solid fa-lock"></i> </a>
+        </div>
+        <p class="copyright">© 2026 Josue Pacheco. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- MODAL LOGIN & ADMIN (Igual que antes pero con estilos glass) -->
+    <div id="login-panel" class="modal-admin">
+        <div class="admin-contenido glass-card" style="max-width: 400px; text-align: center;">
+            <span class="cerrar-admin" onclick="cerrarLogin()">&times;</span>
+            <h2>Acceso Restringido</h2>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Autentícate para editar.</p>
+            <form onsubmit="verificarLogin(event)">
+                <input type="password" id="input-password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-guardar">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- PANEL DE ADMINISTRACIÓN -->
+    <div id="admin-panel" class="modal-admin">
+        <div class="admin-contenido glass-card">
+            <span class="cerrar-admin" onclick="cerrarAdmin()">&times;</span>
+            <h2>Gestión de Portafolio</h2>
+            
+            <div class="tabs">
+                <button onclick="cambiarTab('tab-perfil')" class="tab-btn activo">Perfil</button>
+                <button onclick="cambiarTab('tab-experiencia')" class="tab-btn">Trayectoria</button>
+                <button onclick="cambiarTab('tab-proyectos')" class="tab-btn">Proyectos</button>
+            </div>
+
+            <!-- TAB PERFIL -->
+            <div id="tab-perfil" class="tab-content activo">
+                <form onsubmit="guardarPerfil(event)">
+                    <input type="text" id="admin-nombre" placeholder="Nombre Completo" required>
+                    <input type="text" id="admin-profesion" placeholder="Profesión" required>
+                    <textarea id="admin-sobremi" rows="6" placeholder="Sobre Mí" required></textarea>
+                    <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                </form>
+            </div>
+
+            <!-- TAB TRAYECTORIA -->
+            <div id="tab-experiencia" class="tab-content">
+                <form onsubmit="agregarTrayectoria(event)">
+                    <select id="tray-tipo" class="input-glass">
+                        <option value="Experiencia">Trabajo</option>
+                        <option value="Educacion">Educación / Curso</option>
+                    </select>
+                    <input type="text" id="tray-titulo" placeholder="Puesto / Título" required>
+                    <input type="text" id="tray-inst" placeholder="Institución / Empresa" required>
+                    <input type="text" id="tray-fecha" placeholder="Fechas (Ej. 2024 - Presente)" required>
+                    <textarea id="tray-desc" placeholder="Descripción breve" rows="3" required></textarea>
+                    <button type="submit" class="btn-guardar">Añadir Registro</button>
+                </form>
+                <h3 style="margin-top:25px; border-bottom: 1px solid #333; padding-bottom:10px;">Registros Guardados</h3>
+                <div id="admin-lista-trayectoria"></div>
+            </div>
+
+            <!-- TAB PROYECTOS -->
+            <div id="tab-proyectos" class="tab-content">
+                <form onsubmit="agregarProyecto(event)">
+                    <input type="text" id="proj-titulo" placeholder="Título del proyecto" required>
+                    <input type="text" id="proj-desc" placeholder="Descripción corta" required>
+                    <input type="url" id="proj-url" placeholder="Enlace (URL)" required>
+                    <input type="url" id="proj-img" placeholder="URL de la Imagen" required>
+                    <button type="submit" class="btn-guardar">Añadir Proyecto</button>
+                </form>
+                <h3 style="margin-top:25px; border-bottom: 1px solid #333; padding-bottom:10px;">Proyectos Activos</h3>
+                <div id="admin-lista-proyectos"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICACIÓN -->
+    <div id="toast" class="toast">Notificación</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
